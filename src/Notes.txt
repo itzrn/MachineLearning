@@ -1,0 +1,30 @@
+Training Set & Test Set
+   Lets imagine that u have the task to predict the selling price of cars
+   and that is your independent variable and the dependent variable is mileage and age of the car
+   and the data have 20 cars in total.
+   usually we keep 20% of the data to test and rest for the training.
+   so, we will use the training set to build the model
+   (lets in this case we are building linear regression -> Y = b0 + b1X1 + b2X2)
+   and then we will take the data from the test set and start comparing between predicted and actual price
+   based on we will decide how good model is.
+
+Feature Scaling
+   This is always applied to column.(not applied to cross column)
+   It is a technique to standardize the independent features in a data in a fixed range or scale.
+   There are multiple type of Feature Scaling, but we will Study two most usable : Normalization and Standardization
+   applying feature scaling makes you compare two different type of column in a dataset
+
+   Normalization
+      It is the process of taking minimum inside the column, subtracting that minimum from every single value inside the column
+      and then dividing by the difference between the maximum and minimum.
+      And you will end up with the values ranging from 0 to 1. [0;1]
+
+      X' = X - Xmin/(Xmax - Xmin)
+
+   Standardization
+      The process is similar instead of subtracting minimum we have to subtract the average and we divide by
+      standard deviation.
+      almost all the values lies between -3 to +3 or if we have outliers then they can end with the outside of -3to+3
+
+      X' = X - u/sigma
+         u -> average, sigma -> standard deviation = underRoot(X - mean/(n-1))

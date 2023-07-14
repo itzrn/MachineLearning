@@ -1,0 +1,104 @@
+what is Numpy?
+Numpy is the fundamental package for scientific computing in python
+numpy is a python library that provides a multidimensional array object, various derived objects
+
+What is numpy array?
+An array is a grid of values, and it contains information about the row data, how to locate an element, and how to
+interpret an element
+
+Numpy VS PythonList
+Consumes Less memory
+fast as compared to the python List
+convenient to use
+list is comma separated but array is not comma separated
+
+Importance of Numpy in Python
+wide variety of mathematical operations on array
+it supplies an enormous library of high-level mathematical functions that operate on these arrays and matrices.
+mathematical,logical,shape manipulation, sorting, selecting, I/O, discrete Fourier transforms, basic linear algebra, basic statistical
+operations, random simulation and much more
+
+Difference between numpy array and list in python
+Data types storage
+importing modules
+numerical operation
+modification capabilities
+consumes less memory
+fast as compares to the python list
+convenient to use
+
+Dimensions of arrays here can be created
+1D
+2D
+3D
+Higher Dimensional Array
+
+Random module
+   rand() the function is used to generate a random value between 0 and 1
+   randn() the function is used to generate a random value close to zero.
+   ranf() the function for doing random sampling in numpy. it returns as array of specified shape and fills
+           it with random floats in the half-open interval [0.0, 1.0)
+   randint(0 the function is used to generate a random number between a given range
+
+Data Types in Numpy
+    bool_ - Boolean stored as a byte
+    int_ - Default integer type
+    Intc - Identical to C int(normally int32 or int64)
+    Intp - integer used for indexing(same as C ssize_t; normally either int32 ot int64)
+    int8 - Byte(-128 to 127)
+    int16 - Integer(-32768 to 32767)
+    int32 - Integer(-2147483648 to 2147483647)
+    int64 - Integer(-9223372036854775808 to 9223372036854775807)
+    unit8 - Unsigned integer (0 to 255)
+    unit16 - Unsigned integer (0 to 65535)
+    unit32 - Unsigned integer (0 to 4294967295)
+    unit64 - Unsigned integer (0 to 18446744073709551615)
+    float_ - Shorthand for float64
+    float16 - half precision float:sign bit,5 bits exponent, 10 bits mantissa
+    float32 - Single precision float: sign bit, 8 bits exponents
+    float 64 - Double precision float:sign bit, 11 bits exponent
+    complex_ - Shorthand for complex128
+    complex64 - Complex number, represented by two 32-bits float(real and imaginary components)
+    complex128 - complex number, represented by two 64-bit floats(real and imaginary components)
+
+Arithmetic Operation
+    a+b -> np.add(a,b)
+    a-b -> np.subtract(a,b)
+    a*b -> np.multiply(a,b)
+    a/b -> np.divide(a,b)
+    a%b -> np.mod(a,b)
+    a**b -> np.power(a,b)
+    1/a -> np.reciprocal(a)
+    a and b should be of same dimensional array
+
+Arithmetic Functions
+    np.min(x)
+    np.max(x)
+    np.argmin(x) -> gives the index of min val position
+    np.argmax(x) -> gives the index of max val position
+    np.sqrt(x)
+    np.sin(x)
+    np.cos(x)
+    np.cumsum(x) -> [1,2,3] --> [1,3,6]
+
+Indexing
+   [1, 2, 3, 4, 5]
+    0  1  2  3  4
+   -5 -4 -3 -2 -1
+
+Slicing
+   x = np.array([1,2,3,4,5,6,7,8])
+   x[start:stop(excluded):step]
+   for 2D -> x[0,start:stop(excluded):step]
+
+Iteration
+   for i in x: where x is an array
+       print(i)
+
+Copy and View
+    copy -> the copy owns the data.
+            the copy of an array is a new array.
+            the changes made in the copy data does not reflect in the original array.
+    view -> the view dose not own the data.
+            a view of the original array.
+            any changes made to the view will affect the original array, and any change made to the original array will affect the view
