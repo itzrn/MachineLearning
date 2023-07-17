@@ -1,9 +1,9 @@
 import numpy as np
-print("2. ---> numpy array creation objects(arange, ones, zeros etc)")
+print("2. ---> Numpy array creation objects(arange, ones, zeros etc)")
 zerosarray = np.zeros((2, 5), np.int8)
 print(zerosarray)
 
-arangearray = np.arange(15)  # this will generate 1D numpy array, from 0 to n-1
+arangearray = np.arange(15)  # this will generate 1D Numpy array, from 0 to n-1
 # arangearray = np.arange(start(included), end(excluded), interval)
 print(arangearray)
 linspacearray = np.linspace(1, 5, 12)  # it will divide the integers between 1 to 5 in equally spaced 12 numbers

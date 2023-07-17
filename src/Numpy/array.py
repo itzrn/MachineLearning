@@ -8,7 +8,7 @@ myarr1 = np.array([1, 2, 3, 4, 55, 6, 7], np.int8)  # int8, int32, int64, so her
 # array which contain till 8bit size element, else it will give the error of datatype
 print(f"myarr1 ---> {myarr1}")
 
-print(f"element at 0 index of the array ---> {myarr1[0]}")  # to access any element from numpy array
+print(f"element at 0 index of the array ---> {myarr1[0]}")  # to access any element from Numpy array
 
 
 # print(myarr1[0, 1])  this line will give error bcz, the given statement is to access the element from 2-D array

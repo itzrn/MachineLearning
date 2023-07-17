@@ -99,7 +99,7 @@ print()
 print("To print the day when the temperature was maximum --->")
 print(df[['day', 'temperature']][df['temperature'] == df['temperature'].max()])
 
-# list of pandas operations
+# list of Pandas operations
 # https://pandas.pydata.org/docs/reference/api/pandas.Series.html
 
 print()
@@ -119,4 +119,15 @@ print()
 
 print("To get a particular row using index--->")
 print(df.loc[1])
+
+"""
+Accessing a row then the indexing will start from zero and the zero index will be of
+the first dataset(row)
+
+let if you want to access the rows of a range the the zero indexing is giving
+to the row which contain name of the columns
+therefore, the first index will be of first dataset(row)
+
+and we use the function 'iloc'
+"""
 

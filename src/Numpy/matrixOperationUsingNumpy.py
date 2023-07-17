@@ -50,7 +50,7 @@ print(np.nonzero(arr1))  # it give the tuple of each axis
 
 print()
 
-print("if you want to convert numpy array to python list --->")
+print("if you want to convert Numpy array to python list --->")
 print(arr1.tolist())
 
 # https://docs.scipy.org/doc/numpy-1.6.0/reference/generated/numpy.ndarray.html

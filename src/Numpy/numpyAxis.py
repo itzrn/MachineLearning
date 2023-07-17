@@ -1,5 +1,5 @@
 """
-in numpy indexing of axis start from 0
+in Numpy indexing of axis start from 0
 
 1D array have ---> 1 Axis [0-axis]
 2D array have ---> 2 Axis [0-axis, 1-axis]
