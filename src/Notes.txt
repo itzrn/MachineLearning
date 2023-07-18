@@ -27,4 +27,4 @@ Feature Scaling
       almost all the values lies between -3 to +3 or if we have outliers then they can end with the outside of -3to+3
 
       X' = X - u/sigma
-         u -> average, sigma -> standard deviation = underRoot(X - mean/(n-1))
+         u -> average, sigma -> variance = underRoot(X - mean/(n-1))

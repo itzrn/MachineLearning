@@ -83,9 +83,9 @@ x = np.array(ct.fit_transform(x))  # this will return update version of dataset
 from sklearn.preprocessing import LabelEncoder
 
 le = LabelEncoder()
-y = np.array(y)
-y = y.reshape(2, 5)
-y = y.ravel()
+# y = np.array(y)
+# y = y.reshape(2, 5)
+# y = y.ravel()
 # print(y)
 # print(y.shape)
 y = le.fit_transform(y)
@@ -94,14 +94,22 @@ y = le.fit_transform(y)
 from sklearn.model_selection import train_test_split
 
 x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.2, random_state=1)
-# print(x_train)
-# print(x_test)
-# print(y_train)
-# print(y_test)
+print(x_train)
+print(x_test)
+print(y_train)
+print(y_test)
 
 
 # Feature Scaling
 """
+Do we have to apply feature scaling before splitting or after?
+after splitting
+bcz while calculating the mean and deviation will get change bcz of test set,we only want
+the mean and deviation of only training set and then we will validate the training model on with test set
+
+so, we are prevent information leakage on the test set which supposed not to have until training is done
+
+
 Standardisation ---> [-3,+3]
 This works well all the time, therefore more recommended
 
@@ -115,6 +123,9 @@ from sklearn.preprocessing import StandardScaler
 
 sc = StandardScaler()
 # standardisation is not require for that column whose value is already between [-3:3](dummy variable)
+# fit is used to calculate the necessary parameter of the standard deviation, like here -> average and variance
+# transform is use to put that calculated parameter in standard deviation formula and calculate the standard
+# deviation for each data
 x_train[:, 3:5] = sc.fit_transform(x_train[:, 3:5])
 x_test[:, 3:5] = sc.transform(x_test[:, 3:5])
 
