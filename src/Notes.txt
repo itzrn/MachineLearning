@@ -28,3 +28,80 @@ Feature Scaling
 
       X' = X - u/sigma
          u -> average, sigma -> variance = underRoot(X - mean/(n-1))
+
+
+Linear Regression
+    Y = B0 + B1X1
+    where -
+       Y - Dependent variable
+       B0 - y - Intercept
+       B1 - Slope Coefficient
+       X1 - Independent variable
+
+    As we can see, there can be multiple slope lines
+    that we can draw through our data points.
+    And how do we know which one is the best one,
+    which is the best linear regression,
+    and, in fact, how do we even define the best one?
+    So, in order to answer those questions,
+    we need to look at a method
+    called the ORDINARY LEAST SQUARE METHOD.
+    And the way it works in a visual sense
+    is we need to take our data points
+    and project them vertically onto our linear regression line.
+    Now, we would need to do this
+    for every single linear regression line
+    that we're considering,
+    but for simplicity's sake in this tutorial,
+    we're just going to do it with this line here in the middle.
+    Now, for each pair of points, we have two values,
+    yi and yi-hat.
+    So, what are these values?
+    yi is the actual amount of potatoes.
+    In our case, in our example, potatoes yielded from the farm
+    when that specific amount of nitrogen fertilizer was used.
+    So, let's say 15 kilograms of nitrogen fertilizer were used
+    and the farm yielded two tons of potatoes.
+    yi-hat, on the other hand, is what this linear regression
+    that we're considering,
+    what it predicts the yield to be or to would have been.
+    So, in this case,
+    let's say again 15 kilograms of nitrogen were used,
+    but the linear regression that we're looking at
+    predicts that only one and a half tons of potatoes
+    would have been yielded from the farm.
+    As you can see, there's a slight difference
+    between the actual value, actual yield,
+    and the predicted yield.
+    And that's normal.
+    It's never going to be perfectly,
+    this line's never gonna go perfectly through
+    every single data point.
+    That's simply impossible.
+    But what we want to do is we want to find the best line,
+    and it will be related to how small these differences are,
+    as we can imagine.
+    So, let's have a look here.
+    There's our yi and yi-hat.
+    The difference between them is called the residual.
+    Here's our equation.
+    And the best equation is such equation where b,
+    or where such an equation where the parameters b0 and b1
+    are such that the sum of the squares
+    of the RESIDUALS is minimized.
+    And that's why it's called
+    the ORDINARY LEAST SQUARE METHOD.
+    So, we need to take
+    all of these residuals, these differences,
+    we need to square them for every single data point,
+    and then we need to add up the sum.
+    And whenever we find the smallest value,
+    so, for whichever regression line
+    this value is going to be the smallest,
+    that will be the best regression line.
+    And that will guarantee that the line
+    is going nicely through the data points
+    and it is the best line or the best linear regression
+    to use for modeling our problem.
+    So, there you go, that's an initial
+    how the Ordinary Lease Squares method works.
