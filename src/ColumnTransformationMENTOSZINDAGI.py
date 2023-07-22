@@ -15,7 +15,7 @@ cT = ColumnTransformer(transformers=[  # we have to pass three tuple
 in above code we can do two things for remainder -> passthrough or drop
 pass through means the columns at which u are not applying keep with for training and testing further
 drop means the columns at which u are not applying anything drop it 
-like at age column we are performing anything so it will remain there if we use passthrough 
+like at age column we are not performing anything so it will remain there if we use passthrough 
 and will get drop if we will use drop
 """
 dataset = cT.fit_transform(dataset)  # numpy.ndarray

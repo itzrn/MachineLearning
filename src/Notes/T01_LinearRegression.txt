@@ -100,8 +100,38 @@ Linear Regression
     this value is going to be the smallest,
     that will be the best regression line.
     And that will guarantee that the line
-    is going nicely through the data points
+    is going nicely through the data points,
     and it is the best line or the best linear regression
     to use for modeling our problem.
     So, there you go, that's an initial
     how the Ordinary Lease Squares method works.
+
+Simple Linear Regression(Supervised Learning)
+    Here regression means the output value will be numerical
+
+    The big difference between regression
+    and classification regression
+    is when you have to predict
+    a continuous real value, like a salary,
+    as we're about to do.
+    And classification is when you have to predict a category
+    or you know, a class, which we will do
+    in part three, Classification.
+    
+Simple Linear regression can be calculated in tewo ways:-
+    closed from solution - this techinique is called Ordinary least square(this is simple)
+        Linear Regression of python module contains OLS
+        in this method problem increases when dimensions increases, bcz of which we use gradient diescent
+        m(slope) = sum((Xi - X(bar))(Yi - Y(bar)))/(sum(Xi - X(bar)))^2
+        
+    non - closed form - this uses Gradient discent
+       for this we have SGDRegressor in python
+       
+
+Assumptions Of Linear Regression->
+   1. Linearity - Linear relationship between Y and each X
+   2. Homoscedasticity -> Equal varience
+   3. Multivariate Normality -> Normality of error Distribution
+   4. Independence -> observation includes no autocorrelation(no pattern)
+   5. Lack Of multicollinearity -> predictors are not correlated with each other.
+   6. The Outlier Check -> This is not an assumption, but an extra

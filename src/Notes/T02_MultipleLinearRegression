@@ -1,0 +1,46 @@
+Equation For Multiple Linear Regression
+    y = B0 + B1X1 + B2X2 + .... + BnXn
+    y -> Dependent Variable
+    B0 -> y-intercept
+    B1, B2 ... -> slope Coefficient's
+    X1, X2 ... -> Independent Variables
+
+Well there are five methods that we're going to discuss of building models.
+-->Number 1, is all-in
+       -basically it means to throw in all your variable
+       -when we do this?
+           -you have prior knowledge if you know that these exact variables are the ones are your true
+            predictors you don't have to build anything you already know that this is the case.
+           -The other one is you have to perhaps like I can't really think of good examples here but maybe there's
+            some framework in your company that says that you have to use these variables right.
+            So it's kind of similar to prior knowledge but it's not it's not a it's not your decision it's you might
+            want to do it differently but there is a framework.
+       
+-->number 2, is Backward Elimination
+       -Step 1 you have to select a significance level to stay in the model.
+       -Step 2 you fit the full model with all possible predicter So you kind of do that all in approach which
+        we just talked about and you put all of your variables into your model
+       -step 3 consider the predictor with the highest P-value. if P>SL(significance Level(alpha)) go to step 5 else go to step 4
+       -step 4 remove the predictor
+       -step 5 Fit the model without this variable
+
+-->Number 3, is forward selection
+        -step 1, select a significance level to enter the model.
+        -step 2, fit all the simple regression models y-Xn select the one with the lowest P-value
+        -step 3, keep this variable and fit all possible models with one extra predictor added to the one you already have
+        -step 4, consider the predictor with the lowest P-value. if P<SL, go to step 3, otherwise go to Finish
+        keep not the cureent variable, but the previous variable
+   
+-->number 4, is bi-directional elimination.
+        -step 1, select a SL to enter and to stay in the model
+                eg: SLENTER = 0.05 SLSTAY = 0.05
+        -step 2, Perform the next step of forward Selection(new variable must have P< SLENTER to enter)
+        -step 3, Perform all steps of Backword Elimination (old variables must have P<SLSTAY to stay)
+        -step 4, No new variables can enter and no old variables can exit
+          Finish -> Your Model Is Ready
+
+-->number 5, is score comparison(All Possible Model)
+        step 1, Select a criterion of goodness of fit
+        step 2, Construct All Possible Regression Models (2^N) - 1 total combinations
+        step 3, select the one with the best criterion
+           finish -> Your Model is Ready
