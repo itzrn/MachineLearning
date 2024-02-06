@@ -1,16 +1,18 @@
-import numpy as np
+import seaborn as sns
+import matplotlib.pyplot as plt
 import pandas as pd
+import numpy as np
 
-dataset = pd.read_csv("Datasets/T03_50_Startups.csv")
-X_features = dataset.iloc[:, :-1].values
-Y_outcome = dataset.iloc[:, [-1]].values
+# Creating sample data with three features
+np.random.seed(42)
+data = pd.DataFrame(np.random.randn(100, 3), columns=['Feature1', 'Feature2', 'Feature3'])
 
+# Pair plot to visualize relationships between features
+sns.pairplot(data)
+plt.show()
 
-from sklearn.compose import ColumnTransformer
-from sklearn.preprocessing import OneHotEncoder
-cT = ColumnTransformer(transformers=[
-    ('OHE', OneHotEncoder(sparse=False, drop='first'),[3])
-], remainder='passthrough')
-X_features = cT.fit_transform(X_features)
-
-print(X_features)
+# Correlation matrix heatmap
+corr_matrix = data.corr()
+sns.heatmap(corr_matrix, annot=True, cmap='coolwarm')
+plt.title('Correlation Matrix')
+plt.show()
